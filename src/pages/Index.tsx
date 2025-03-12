@@ -193,16 +193,16 @@ const Index = () => {
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              An RTL design engineer passionate about creating efficient digital designs that 
-              solve complex problems in modern computing.
+              An RTL design engineer with 1 year of experience, passionate about creating efficient digital designs 
+              for modern computing and connectivity standards.
             </p>
           </AnimatedSection>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <img 
-                src="https://images.unsplash.com/photo-1633412802994-5c058f151b66?q=80&w=2070" 
-                alt="Digital circuit" 
+                src="/engineer-at-work.jpg" 
+                alt="RTL Engineer at work" 
                 className="rounded-xl w-full object-cover shadow-md"
               />
             </AnimatedSection>
@@ -210,16 +210,15 @@ const Index = () => {
             <AnimatedSection>
               <h3 className="text-2xl font-semibold mb-4">Precision in Every Design</h3>
               <p className="text-muted-foreground mb-6">
-                With over a decade of experience in RTL design and verification, I specialize in creating 
+                With 1 year of hands-on experience in RTL design and verification, I specialize in creating 
                 high-performance, energy-efficient digital systems from concept to implementation.
               </p>
               <p className="text-muted-foreground mb-6">
-                My expertise spans ASIC and FPGA designs, verification frameworks, and digital 
-                system architecture for applications ranging from consumer electronics to 
-                high-performance computing.
+                My expertise spans HDMI and HDCP (1.x/2.x) protocol implementation, verification frameworks, 
+                and digital system architecture for consumer electronics and multimedia applications.
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
-                {["SystemVerilog", "VHDL", "UVM", "Verilog", "FPGA", "ASIC", "Timing Analysis", "SoC Design"].map((skill, i) => (
+                {["SystemVerilog", "VHDL", "UVM", "Verilog", "HDMI", "HDCP", "Timing Analysis", "Protocol Verification"].map((skill, i) => (
                   <span key={i} className="chip bg-secondary text-secondary-foreground">
                     {skill}
                   </span>
@@ -252,7 +251,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Areas of Expertise</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Specialized knowledge in RTL design, verification, and implementation methodologies 
-              for complex digital systems.
+              for HDMI and HDCP protocols.
             </p>
           </AnimatedSection>
           
@@ -266,27 +265,27 @@ const Index = () => {
             <ExpertiseCard 
               icon={CircuitBoardIcon} 
               title="RTL Design" 
-              description="Implementation of high-performance, area-efficient RTL designs using SystemVerilog and VHDL for ASICs and FPGAs."
+              description="Implementation of high-performance, area-efficient RTL designs using SystemVerilog and VHDL for multimedia interfaces."
             />
             <ExpertiseCard 
               icon={CodeIcon} 
-              title="Functional Verification" 
-              description="Comprehensive verification using UVM, SystemVerilog, and assertion-based methodologies to ensure design correctness."
+              title="HDMI Protocol" 
+              description="Design and verification of HDMI interfaces, ensuring compliance with the latest specifications and interoperability with consumer electronics."
             />
             <ExpertiseCard 
               icon={MicrochipIcon} 
-              title="ASIC Implementation" 
-              description="End-to-end ASIC design flow from synthesis to layout, focusing on timing closure and power optimization."
+              title="HDCP Implementation" 
+              description="Implementation of HDCP 1.x/2.x content protection protocols, ensuring secure transmission of high-definition content."
             />
             <ExpertiseCard 
               icon={TerminalIcon} 
-              title="Design for Testability" 
-              description="Implementation of DFT structures including scan chains, BIST, and boundary scan for manufacturing test." 
+              title="Functional Verification" 
+              description="Comprehensive verification using UVM, SystemVerilog, and assertion-based methodologies to ensure design correctness." 
             />
             <ExpertiseCard 
               icon={ServerIcon} 
-              title="SoC Architecture" 
-              description="Development of scalable SoC architectures with optimized interconnects, memory subsystems, and peripheral integration."
+              title="Protocol Compliance" 
+              description="Rigorous testing and verification to ensure designs meet industry standards and certification requirements."
             />
             <ExpertiseCard 
               icon={MonitorIcon} 
@@ -315,23 +314,23 @@ const Index = () => {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             <ProjectCard 
-              title="High-Performance CPU Core" 
-              category="Processor Design" 
-              description="Design and verification of a RISC-V based processor core with advanced branch prediction and out-of-order execution." 
-              image="https://images.unsplash.com/photo-1591405351990-4726e331f141?q=80&w=2070"
+              title="HDMI 2.1 Transmitter" 
+              category="Interface Design" 
+              description="Design and verification of an HDMI 2.1 transmitter core with high bandwidth capability for 4K/8K video transmission." 
+              image="/hdmi-project.jpg"
             />
             <ProjectCard 
-              title="AI Accelerator" 
-              category="Hardware Acceleration" 
-              description="Implementation of a neural network accelerator optimized for edge computing with high energy efficiency." 
-              image="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?q=80&w=2065"
+              title="HDCP 2.3 Authentication" 
+              category="Security Protocol" 
+              description="Implementation of HDCP 2.3 authentication and key exchange protocols for secure content protection." 
+              image="/hdcp-project.jpg"
               delay={100}
             />
             <ProjectCard 
-              title="PCIe Gen5 Controller" 
-              category="Interface Design" 
-              description="Design of a high-speed PCIe Gen5 controller with emphasis on reliability and compliance with specifications." 
-              image="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2070"
+              title="Multimedia SoC Interface" 
+              category="System Integration" 
+              description="Integration of HDMI and HDCP modules into a multimedia SoC design with emphasis on low power consumption." 
+              image="/soc-project.jpg"
               delay={200}
             />
           </motion.div>
@@ -365,21 +364,21 @@ const Index = () => {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
           >
             <Testimonial 
-              quote="The RTL design delivered was not only functional but exceptionally well optimized for both performance and area. The attention to detail in documentation made the integration seamless."
+              quote="Their RTL design for our HDMI interface was not only functional but exceptionally well optimized for both performance and area. The attention to detail in documentation made the integration seamless."
               author="Sarah Chen"
               role="Hardware Engineering Manager"
               image="https://randomuser.me/api/portraits/women/5.jpg"
             />
             <Testimonial 
-              quote="Working with this RTL engineer was a game-changer for our project. The verification environment they built caught several critical bugs before tape-out, potentially saving us millions."
+              quote="Working with this RTL engineer on our HDCP implementation was a game-changer for our project. The verification environment they built caught several critical bugs before production."
               author="Michael Rodriguez"
               role="VP of Engineering"
               image="https://randomuser.me/api/portraits/men/44.jpg"
             />
             <Testimonial 
-              quote="The FPGA prototype delivered was instrumental in allowing our software team to start development months ahead of schedule. The RTL was clean, well-documented, and performed exactly as specified."
+              quote="The HDMI transmitter design delivered was instrumental in allowing our software team to start development ahead of schedule. The RTL was clean, well-documented, and performed exactly as specified."
               author="David Kim"
-              role="CTO, Tech Innovations"
+              role="CTO, Media Solutions"
               image="https://randomuser.me/api/portraits/men/32.jpg"
             />
           </motion.div>
@@ -393,7 +392,7 @@ const Index = () => {
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Bring Your Digital Design to Life?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Whether you're looking for a complete RTL design solution, verification expertise, or consultation on your hardware project, let's discuss how I can help you achieve your goals.
+              Whether you're looking for HDMI interface design, HDCP implementation, or consultation on your hardware project, let's discuss how I can help you achieve your goals.
             </p>
             <Link 
               to="/contact" 
