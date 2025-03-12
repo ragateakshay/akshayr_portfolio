@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
@@ -102,24 +101,6 @@ const ProjectCard = ({ title, category, description, image, delay = 0 }) => {
           </Link>
         </div>
       </div>
-    </motion.div>
-  );
-};
-
-// Testimonial component
-const Testimonial = ({ quote, author, role, image }) => {
-  return (
-    <motion.div variants={fadeInUp} className="p-6 glass rounded-xl">
-      <div className="flex space-x-4 items-center mb-4">
-        <div className="w-12 h-12 rounded-full overflow-hidden">
-          <img src={image} alt={author} className="w-full h-full object-cover" />
-        </div>
-        <div>
-          <p className="font-medium">{author}</p>
-          <p className="text-sm text-muted-foreground">{role}</p>
-        </div>
-      </div>
-      <blockquote className="italic text-muted-foreground">"{quote}"</blockquote>
     </motion.div>
   );
 };
@@ -343,45 +324,6 @@ const Index = () => {
               View All Projects
             </Link>
           </AnimatedSection>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-20 bg-accent/30">
-        <div className="max-w-7xl mx-auto px-6 md:px-10">
-          <AnimatedSection className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Client Testimonials</h2>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Feedback from clients and colleagues about my work and collaboration.
-            </p>
-          </AnimatedSection>
-          
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            viewport={{ once: true, amount: 0.1 }}
-            variants={staggerContainer}
-            className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-          >
-            <Testimonial 
-              quote="Their RTL design for our HDMI interface was not only functional but exceptionally well optimized for both performance and area. The attention to detail in documentation made the integration seamless."
-              author="Sarah Chen"
-              role="Hardware Engineering Manager"
-              image="https://randomuser.me/api/portraits/women/5.jpg"
-            />
-            <Testimonial 
-              quote="Working with this RTL engineer on our HDCP implementation was a game-changer for our project. The verification environment they built caught several critical bugs before production."
-              author="Michael Rodriguez"
-              role="VP of Engineering"
-              image="https://randomuser.me/api/portraits/men/44.jpg"
-            />
-            <Testimonial 
-              quote="The HDMI transmitter design delivered was instrumental in allowing our software team to start development ahead of schedule. The RTL was clean, well-documented, and performed exactly as specified."
-              author="David Kim"
-              role="CTO, Media Solutions"
-              image="https://randomuser.me/api/portraits/men/32.jpg"
-            />
-          </motion.div>
         </div>
       </section>
 
