@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
@@ -195,11 +196,11 @@ const Index = () => {
                 high-performance, energy-efficient digital systems from concept to implementation.
               </p>
               <p className="text-muted-foreground mb-6">
-                My expertise spans HDMI and HDCP (1.x/2.x) protocol implementation, verification frameworks, 
+                My expertise focuses on HDMI 1.4b transmitter design IP implementation, verification frameworks, 
                 and digital system architecture for consumer electronics and multimedia applications.
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
-                {["SystemVerilog", "VHDL", "UVM", "Verilog", "HDMI", "HDCP", "Timing Analysis", "Protocol Verification"].map((skill, i) => (
+                {["SystemVerilog", "VHDL", "UVM", "Verilog", "HDMI 1.4b", "Timing Analysis", "Protocol Verification"].map((skill, i) => (
                   <span key={i} className="chip bg-secondary text-secondary-foreground">
                     {skill}
                   </span>
@@ -232,7 +233,7 @@ const Index = () => {
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Areas of Expertise</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
               Specialized knowledge in RTL design, verification, and implementation methodologies 
-              for HDMI and HDCP protocols.
+              for HDMI 1.4b transmitter protocols.
             </p>
           </AnimatedSection>
           
@@ -250,13 +251,13 @@ const Index = () => {
             />
             <ExpertiseCard 
               icon={CodeIcon} 
-              title="HDMI Protocol" 
-              description="Design and verification of HDMI interfaces, ensuring compliance with the latest specifications and interoperability with consumer electronics."
+              title="HDMI 1.4b Protocol" 
+              description="Design and verification of HDMI 1.4b interfaces, ensuring compliance with specifications and interoperability with consumer electronics."
             />
             <ExpertiseCard 
               icon={MicrochipIcon} 
-              title="HDCP Implementation" 
-              description="Implementation of HDCP 1.x/2.x content protection protocols, ensuring secure transmission of high-definition content."
+              title="Video Interface Implementation" 
+              description="Implementation of video timing controllers and interface protocols for reliable audio/video transmission."
             />
             <ExpertiseCard 
               icon={TerminalIcon} 
@@ -266,7 +267,7 @@ const Index = () => {
             <ExpertiseCard 
               icon={ServerIcon} 
               title="Protocol Compliance" 
-              description="Rigorous testing and verification to ensure designs meet industry standards and certification requirements."
+              description="Rigorous testing and verification to ensure designs meet HDMI 1.4b industry standards and certification requirements."
             />
             <ExpertiseCard 
               icon={MonitorIcon} 
@@ -295,22 +296,22 @@ const Index = () => {
             className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           >
             <ProjectCard 
-              title="HDMI 2.1 Transmitter" 
+              title="HDMI 1.4b Transmitter" 
               category="Interface Design" 
-              description="Design and verification of an HDMI 2.1 transmitter core with high bandwidth capability for 4K/8K video transmission." 
+              description="Design and verification of an HDMI 1.4b transmitter core for high-definition video transmission in consumer electronics." 
               image="/hdmi-project.jpg"
             />
             <ProjectCard 
-              title="HDCP 2.3 Authentication" 
-              category="Security Protocol" 
-              description="Implementation of HDCP 2.3 authentication and key exchange protocols for secure content protection." 
+              title="Video Timing Controller" 
+              category="Video Processing" 
+              description="Implementation of a video timing controller supporting various resolutions and refresh rates compliant with HDMI 1.4b standards." 
               image="/hdcp-project.jpg"
               delay={100}
             />
             <ProjectCard 
               title="Multimedia SoC Interface" 
               category="System Integration" 
-              description="Integration of HDMI and HDCP modules into a multimedia SoC design with emphasis on low power consumption." 
+              description="Integration of HDMI 1.4b modules into a multimedia SoC design with emphasis on low power consumption." 
               image="/soc-project.jpg"
               delay={200}
             />
@@ -334,7 +335,7 @@ const Index = () => {
           <AnimatedSection className="text-center max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">Ready to Bring Your Digital Design to Life?</h2>
             <p className="text-lg text-muted-foreground mb-8">
-              Whether you're looking for HDMI interface design, HDCP implementation, or consultation on your hardware project, let's discuss how I can help you achieve your goals.
+              Whether you're looking for HDMI 1.4b interface design, protocol implementation, or consultation on your hardware project, let's discuss how I can help you achieve your goals.
             </p>
             <Link 
               to="/contact" 
