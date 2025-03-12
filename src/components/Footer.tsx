@@ -8,7 +8,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-10">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <h3 className="text-xl font-semibold mb-4">RTL Engineer</h3>
+            <h3 className="text-xl font-semibold mb-4">AKSHAY R</h3>
             <p className="text-muted-foreground max-w-sm">
               Specialized in digital design, verification, and implementation of complex RTL systems for advanced semiconductor solutions.
             </p>
@@ -57,7 +57,7 @@ const Footer = () => {
         </div>
         
         <div className="mt-12 pt-6 border-t border-border text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} RTL Engineer. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} AKSHAY R. All rights reserved.</p>
         </div>
       </div>
     </footer>
