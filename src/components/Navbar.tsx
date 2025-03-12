@@ -38,7 +38,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between">
         <Link to="/" className="text-xl font-medium">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400">
-            RTL Engineer
+            AKSHAY R
           </span>
         </Link>
 
