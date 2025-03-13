@@ -1,12 +1,13 @@
 
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { cn } from '../lib/utils';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -23,6 +24,21 @@ const Navbar = () => {
 
   const toggleMobileMenu = () => {
     setMobileMenuOpen(!mobileMenuOpen);
+  };
+
+  const scrollToSection = (sectionId) => {
+    setMobileMenuOpen(false);
+    
+    // If we're not on the home page, navigate to home first
+    if (location.pathname !== '/') {
+      return; // Let the Link component handle the navigation
+    }
+    
+    // If already on home page, scroll to the section
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
   };
 
   return (
@@ -44,13 +60,25 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          {['Home', 'About', 'Expertise', 'Projects', 'Contact'].map((item, index) => (
+          {[
+            { name: 'Home', path: '/', section: 'home' },
+            { name: 'About', path: '/#about', section: 'about' },
+            { name: 'Expertise', path: '/#expertise', section: 'expertise' },
+            { name: 'Projects', path: '/#projects', section: 'projects' },
+            { name: 'Contact', path: '/#contact', section: 'contact' }
+          ].map((item, index) => (
             <Link
               key={index}
-              to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+              to={item.path}
+              onClick={(e) => {
+                if (location.pathname === '/' && item.section !== 'home') {
+                  e.preventDefault();
+                  scrollToSection(item.section);
+                }
+              }}
               className="text-sm font-medium relative transition-base group"
             >
-              {item}
+              {item.name}
               <span className="absolute left-0 bottom-0 w-0 h-0.5 bg-primary transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
@@ -83,14 +111,26 @@ const Navbar = () => {
         mobileMenuOpen ? "max-h-screen pb-4" : "max-h-0"
       )}>
         <div className="py-2 px-6 flex flex-col">
-          {['Home', 'About', 'Expertise', 'Projects', 'Contact'].map((item, index) => (
+          {[
+            { name: 'Home', path: '/', section: 'home' },
+            { name: 'About', path: '/#about', section: 'about' },
+            { name: 'Expertise', path: '/#expertise', section: 'expertise' },
+            { name: 'Projects', path: '/#projects', section: 'projects' },
+            { name: 'Contact', path: '/#contact', section: 'contact' }
+          ].map((item, index) => (
             <Link
               key={index}
-              to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-              onClick={() => setMobileMenuOpen(false)}
+              to={item.path}
+              onClick={(e) => {
+                if (location.pathname === '/' && item.section !== 'home') {
+                  e.preventDefault();
+                  scrollToSection(item.section);
+                }
+                setMobileMenuOpen(false);
+              }}
               className="py-3 text-base transition-colors hover:text-primary border-b border-gray-100/10 last:border-none"
             >
-              {item}
+              {item.name}
             </Link>
           ))}
         </div>

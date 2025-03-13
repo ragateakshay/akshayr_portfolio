@@ -1,8 +1,23 @@
 
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 const Footer = () => {
+  const location = useLocation();
+
+  const scrollToSection = (sectionId) => {
+    // If we're not on the home page, navigate to home first
+    if (location.pathname !== '/') {
+      return; // Let the Link component handle the navigation
+    }
+    
+    // If already on home page, scroll to the section
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <footer className="bg-background py-12 border-t border-border">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
@@ -17,13 +32,25 @@ const Footer = () => {
           <div>
             <h4 className="font-medium mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              {['Home', 'About', 'Expertise', 'Projects', 'Contact'].map((item, index) => (
+              {[
+                { name: 'Home', path: '/', section: 'home' },
+                { name: 'About', path: '/#about', section: 'about' },
+                { name: 'Expertise', path: '/#expertise', section: 'expertise' },
+                { name: 'Projects', path: '/#projects', section: 'projects' },
+                { name: 'Contact', path: '/#contact', section: 'contact' }
+              ].map((item, index) => (
                 <li key={index}>
                   <Link 
-                    to={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
+                    to={item.path}
+                    onClick={(e) => {
+                      if (location.pathname === '/' && item.section !== 'home') {
+                        e.preventDefault();
+                        scrollToSection(item.section);
+                      }
+                    }}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}

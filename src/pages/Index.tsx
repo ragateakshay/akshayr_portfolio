@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
@@ -117,7 +116,7 @@ const Index = () => {
   return (
     <Layout>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-32 overflow-hidden">
+      <section id="home" className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-accent/50 to-background/0 pointer-events-none"></div>
         <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/3 md:w-1/4 h-auto opacity-10 md:opacity-20">
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto animate-float">
@@ -170,7 +169,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section className="py-20 bg-background">
+      <section id="about" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
@@ -227,7 +226,7 @@ const Index = () => {
       </section>
 
       {/* Expertise Section */}
-      <section className="py-20 bg-accent/30">
+      <section id="expertise" className="py-20 bg-accent/30">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Areas of Expertise</h2>
@@ -279,7 +278,7 @@ const Index = () => {
       </section>
 
       {/* Projects Section */}
-      <section className="py-20 bg-background">
+      <section id="projects" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Featured Projects</h2>
@@ -329,7 +328,7 @@ const Index = () => {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-20 bg-background relative overflow-hidden">
+      <section id="contact" className="py-20 bg-background relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
           <AnimatedSection className="text-center max-w-3xl mx-auto">
