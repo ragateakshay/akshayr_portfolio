@@ -308,9 +308,9 @@ const Index = () => {
               delay={100}
             />
             <ProjectCard 
-              title="Multimedia SoC Interface" 
-              category="System Integration" 
-              description="Integration of HDMI 1.4b modules into a multimedia SoC design with emphasis on low power consumption." 
+              title="HDMI Protocol Integration" 
+              category="Protocol Integration" 
+              description="Integration of HDMI with DDC (Display Data Channel) and HDCP protocols for comprehensive multimedia interface solutions." 
               image="/soc-project.jpg"
               delay={200}
             />
