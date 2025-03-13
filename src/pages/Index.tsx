@@ -4,6 +4,7 @@ import { motion, useAnimation } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Layout from '../components/Layout';
 import { MicrochipIcon, CodeIcon, TerminalIcon, CircuitBoardIcon, ServerIcon, MonitorIcon } from 'lucide-react';
+import { Button } from '../components/ui/button';
 
 // Animation variants
 const fadeInUp = {
@@ -113,6 +114,13 @@ const Index = () => {
     heroControls.start('visible');
   }, [heroControls]);
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <Layout>
       {/* Hero Section */}
@@ -151,18 +159,20 @@ const Index = () => {
             </motion.p>
             
             <motion.div variants={fadeInUp} className="flex flex-col sm:flex-row gap-4 animation-delay-400">
-              <Link 
-                to="/projects" 
+              <button 
+                onClick={() => scrollToSection('projects')} 
                 className="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors"
               >
                 View My Projects
-              </Link>
-              <Link 
-                to="/contact" 
+              </button>
+              <a 
+                href="https://forms.gle/exampleGoogleFormURL" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className="bg-secondary text-secondary-foreground px-6 py-3 rounded-md font-medium hover:bg-secondary/80 transition-colors"
               >
                 Get in Touch
-              </Link>
+              </a>
             </motion.div>
           </motion.div>
         </div>
@@ -336,12 +346,14 @@ const Index = () => {
             <p className="text-lg text-muted-foreground mb-8">
               Whether you're looking for HDMI 1.4b interface design, protocol implementation, or consultation on your hardware project, let's discuss how I can help you achieve your goals.
             </p>
-            <Link 
-              to="/contact" 
+            <a 
+              href="https://forms.gle/exampleGoogleFormURL" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               className="bg-primary text-white px-8 py-4 rounded-md font-medium hover:bg-primary/90 transition-colors inline-block"
             >
               Start a Conversation
-            </Link>
+            </a>
           </AnimatedSection>
         </div>
       </section>
