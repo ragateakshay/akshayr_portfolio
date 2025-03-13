@@ -183,8 +183,8 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection>
               <img 
-                src="/engineer-at-work.jpg" 
-                alt="RTL Engineer at work" 
+                src="/user-image.jpg" 
+                alt="Akshay R" 
                 className="rounded-xl w-full object-cover shadow-md"
               />
             </AnimatedSection>
@@ -302,9 +302,9 @@ const Index = () => {
               image="/hdmi-project.jpg"
             />
             <ProjectCard 
-              title="Video Timing Controller" 
-              category="Video Processing" 
-              description="Implementation of a video timing controller supporting various resolutions and refresh rates compliant with HDMI 1.4b standards." 
+              title="HDCP Implementation" 
+              category="Content Protection" 
+              description="Development of HDCP (High-bandwidth Digital Content Protection) modules compliant with HDMI 1.4b for secure content transmission." 
               image="/hdcp-project.jpg"
               delay={100}
             />
