@@ -203,9 +203,8 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
                 {[
-                  "RTL/ASIC Design", "Verilog HDL", "HDMI 1.4b Protocol",
-                  "Timing Analysis", "Digital Verification", "Simulators (Cadence-NC, Synopsys-VCS)",
-                  "Synthesis Tools (Synopsys-DC, Spyglass)", "Waveform Analysis (Verdi, Simvision)"
+                  "RTL/ASIC Design", "Verilog HDL", "Timing Analysis",
+                  "Simulators (Cadence-NC, Synopsys-VCS)", "Synthesis Tools (Synopsys-DC, Spyglass)", "Waveform Analysis (Verdi, Simvision)"
                 ].map((skill, i) => (
                   <span key={i} className="chip bg-secondary text-secondary-foreground">
                     {skill}
