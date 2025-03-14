@@ -74,7 +74,7 @@ const Footer = () => {
               Interested in collaborating or have a question?
             </p>
             <a 
-              href="https://forms.gle/exampleGoogleFormURL" 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSec8JZ3yjtktU2sF2AwoLxob-XZRBcqXcYWWn87WlpjJaO2zA/viewform?usp=sharing" 
               target="_blank" 
               rel="noopener noreferrer"
               className="inline-block bg-primary text-white px-4 py-2 rounded-md hover:bg-primary/90 transition-colors"

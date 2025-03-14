@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
@@ -167,7 +166,7 @@ const Index = () => {
                 View My Projects
               </button>
               <a 
-                href="https://forms.gle/exampleGoogleFormURL" 
+                href="https://docs.google.com/forms/d/e/1FAIpQLSec8JZ3yjtktU2sF2AwoLxob-XZRBcqXcYWWn87WlpjJaO2zA/viewform?usp=sharing" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="bg-secondary text-secondary-foreground px-6 py-3 rounded-md font-medium hover:bg-secondary/80 transition-colors"
@@ -210,7 +209,23 @@ const Index = () => {
                 and digital system architecture for consumer electronics and multimedia applications.
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
-                {["SystemVerilog", "VHDL", "UVM", "Verilog", "HDMI 1.4b", "Timing Analysis", "Protocol Verification"].map((skill, i) => (
+                {[
+                  "Verilog HDL", 
+                  "HDMI 1.4b", 
+                  "Timing Analysis", 
+                  "Protocol Verification",
+                  "Cadence - NC",
+                  "Synopsys - VCS",
+                  "Synopsys - DC",
+                  "Spyglass CDC",
+                  "Spyglass lint",
+                  "Cadence - Conformal LEC",
+                  "Windows",
+                  "Linux",
+                  "Microsoft Visio",
+                  "Synopsys Verdi",
+                  "Simvision"
+                ].map((skill, i) => (
                   <span key={i} className="chip bg-secondary text-secondary-foreground">
                     {skill}
                   </span>
@@ -350,7 +365,7 @@ const Index = () => {
               Whether you're looking for HDMI 1.4b interface design, protocol implementation, or consultation on your hardware project, let's discuss how I can help you achieve your goals.
             </p>
             <a 
-              href="https://forms.gle/exampleGoogleFormURL" 
+              href="https://docs.google.com/forms/d/e/1FAIpQLSec8JZ3yjtktU2sF2AwoLxob-XZRBcqXcYWWn87WlpjJaO2zA/viewform?usp=sharing" 
               target="_blank" 
               rel="noopener noreferrer" 
               className="bg-primary text-white px-8 py-4 rounded-md font-medium hover:bg-primary/90 transition-colors inline-block"
