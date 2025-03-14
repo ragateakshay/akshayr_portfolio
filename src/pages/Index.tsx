@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
@@ -215,8 +216,10 @@ const Index = () => {
                   </span>
                 ))}
               </div>
-              <Link 
-                to="/about" 
+              <a 
+                href="https://www.linkedin.com/in/akshayragate" 
+                target="_blank" 
+                rel="noopener noreferrer" 
                 className="text-primary font-medium inline-flex items-center group"
               >
                 Learn more about my experience
@@ -229,7 +232,7 @@ const Index = () => {
                 >
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </Link>
+              </a>
             </AnimatedSection>
           </div>
         </div>
