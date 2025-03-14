@@ -62,7 +62,7 @@ const ExpertiseCard = ({ icon: Icon, title, description }) => {
   );
 };
 
-const ProjectCard = ({ title, category, description, image, delay = 0 }) => {
+const ProjectCard = ({ title, category, description, image, delay = 0, link }) => {
   return (
     <motion.div
       variants={fadeInUp}
@@ -82,7 +82,7 @@ const ProjectCard = ({ title, category, description, image, delay = 0 }) => {
         <p className="text-muted-foreground flex-grow">{description}</p>
         <div className="mt-4 pt-4 border-t border-gray-100">
           <Link 
-            to="/projects" 
+            to={link} 
             className="text-primary font-medium inline-flex items-center group"
           >
             View details
@@ -203,18 +203,9 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
                 {[
-                  "RTL/ASIC Design", 
-                  "Verilog HDL", 
-                  "HDMI 1.4b Protocol",
-                  "Digital Verification",
-                  "Timing Analysis", 
-                  "Simulators (Cadence-NC, Synopsys-VCS)",
-                  "Synthesis Tools (Synopsys-DC)",
-                  "Spyglass (CDC, Lint)",
-                  "Conformal LEC",
-                  "Waveform Analysis (Verdi, Simvision)",
-                  "Microsoft Visio",
-                  "Windows/Linux"
+                  "RTL/ASIC Design", "Verilog HDL", "HDMI 1.4b Protocol",
+                  "Timing Analysis", "Digital Verification", "Simulators (Cadence-NC, Synopsys-VCS)",
+                  "Synthesis Tools (Synopsys-DC, Spyglass)", "Waveform Analysis (Verdi, Simvision)"
                 ].map((skill, i) => (
                   <span key={i} className="chip bg-secondary text-secondary-foreground">
                     {skill}
@@ -315,6 +306,7 @@ const Index = () => {
               category="Interface Design" 
               description="Design and verification of an HDMI 1.4b transmitter core for high-definition video transmission in consumer electronics." 
               image="/hdmi-project.jpg"
+              link="/projects/hdmi-transmitter"
             />
             <ProjectCard 
               title="HDCP Implementation" 
@@ -322,6 +314,7 @@ const Index = () => {
               description="Development of HDCP (High-bandwidth Digital Content Protection) modules compliant with HDMI 1.4b for secure content transmission." 
               image="/hdcp-project.jpg"
               delay={100}
+              link="/projects/hdcp-implementation"
             />
             <ProjectCard 
               title="HDMI Protocol Integration" 
@@ -329,6 +322,7 @@ const Index = () => {
               description="Integration of HDMI with DDC (Display Data Channel) and HDCP protocols for comprehensive multimedia interface solutions." 
               image="/soc-project.jpg"
               delay={200}
+              link="/projects/hdmi-protocol-integration"
             />
           </motion.div>
           

@@ -6,6 +6,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import NotFound from "./pages/NotFound";
+import HDMITransmitter from "./pages/projects/HDMITransmitter";
+import HDCPImplementation from "./pages/projects/HDCPImplementation";
+import HDMIProtocolIntegration from "./pages/projects/HDMIProtocolIntegration";
 
 const queryClient = new QueryClient();
 
@@ -17,7 +20,9 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
-          {/* Additional routes will be added as we create other pages */}
+          <Route path="/projects/hdmi-transmitter" element={<HDMITransmitter />} />
+          <Route path="/projects/hdcp-implementation" element={<HDCPImplementation />} />
+          <Route path="/projects/hdmi-protocol-integration" element={<HDMIProtocolIntegration />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
