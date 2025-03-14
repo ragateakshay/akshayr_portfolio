@@ -41,6 +41,14 @@ const Navbar = () => {
     }
   };
 
+  // Function to handle Home click and scroll to top
+  const scrollToTop = (e) => {
+    if (location.pathname === '/') {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
+
   return (
     <motion.header
       initial={{ y: -100, opacity: 0 }}
@@ -52,7 +60,7 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <Link to="/" className="text-xl font-medium">
+        <Link to="/" onClick={scrollToTop} className="text-xl font-medium">
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
             Akshay R
           </span>
@@ -71,7 +79,9 @@ const Navbar = () => {
               key={index}
               to={item.path}
               onClick={(e) => {
-                if (location.pathname === '/' && item.section !== 'home') {
+                if (item.section === 'home') {
+                  scrollToTop(e);
+                } else if (location.pathname === '/' && item.section !== 'home') {
                   e.preventDefault();
                   scrollToSection(item.section);
                 }
@@ -122,7 +132,9 @@ const Navbar = () => {
               key={index}
               to={item.path}
               onClick={(e) => {
-                if (location.pathname === '/' && item.section !== 'home') {
+                if (item.section === 'home') {
+                  scrollToTop(e);
+                } else if (location.pathname === '/' && item.section !== 'home') {
                   e.preventDefault();
                   scrollToSection(item.section);
                 }

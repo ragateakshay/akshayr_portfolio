@@ -6,7 +6,6 @@ import Layout from '../components/Layout';
 import { MicrochipIcon, CodeIcon, TerminalIcon, CircuitBoardIcon, ServerIcon, MonitorIcon } from 'lucide-react';
 import { Button } from '../components/ui/button';
 
-// Animation variants
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
   visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] } }
@@ -22,7 +21,6 @@ const staggerContainer = {
   }
 };
 
-// Animated section component
 const AnimatedSection = ({ children, className = "", delay = 0 }) => {
   const controls = useAnimation();
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
@@ -47,7 +45,6 @@ const AnimatedSection = ({ children, className = "", delay = 0 }) => {
   );
 };
 
-// Expertise card component
 const ExpertiseCard = ({ icon: Icon, title, description }) => {
   return (
     <motion.div 
@@ -65,7 +62,6 @@ const ExpertiseCard = ({ icon: Icon, title, description }) => {
   );
 };
 
-// Project card component
 const ProjectCard = ({ title, category, description, image, delay = 0 }) => {
   return (
     <motion.div
@@ -107,7 +103,6 @@ const ProjectCard = ({ title, category, description, image, delay = 0 }) => {
 };
 
 const Index = () => {
-  // Hero animations
   const heroControls = useAnimation();
   
   useEffect(() => {
@@ -123,7 +118,6 @@ const Index = () => {
 
   return (
     <Layout>
-      {/* Hero Section */}
       <section id="home" className="relative py-20 md:py-32 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-b from-accent/50 to-background/0 pointer-events-none"></div>
         <div className="absolute right-0 top-1/2 transform -translate-y-1/2 w-1/3 md:w-1/4 h-auto opacity-10 md:opacity-20">
@@ -178,13 +172,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              An RTL design engineer with 1 year of experience, passionate about creating efficient digital designs 
+              An RTL/ASIC design engineer with 1 year of experience, passionate about creating efficient digital designs 
               for modern computing and connectivity standards.
             </p>
           </AnimatedSection>
@@ -201,7 +194,7 @@ const Index = () => {
             <AnimatedSection>
               <h3 className="text-2xl font-semibold mb-4">Precision in Every Design</h3>
               <p className="text-muted-foreground mb-6">
-                With 1 year of hands-on experience in RTL design and verification, I specialize in creating 
+                With 1 year of hands-on experience in RTL/ASIC design and verification, I specialize in creating 
                 high-performance, energy-efficient digital systems from concept to implementation.
               </p>
               <p className="text-muted-foreground mb-6">
@@ -210,21 +203,18 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-3 mb-6">
                 {[
+                  "RTL/ASIC Design", 
                   "Verilog HDL", 
-                  "HDMI 1.4b", 
+                  "HDMI 1.4b Protocol",
+                  "Digital Verification",
                   "Timing Analysis", 
-                  "Protocol Verification",
-                  "Cadence - NC",
-                  "Synopsys - VCS",
-                  "Synopsys - DC",
-                  "Spyglass CDC",
-                  "Spyglass lint",
-                  "Cadence - Conformal LEC",
-                  "Windows",
-                  "Linux",
+                  "Simulators (Cadence-NC, Synopsys-VCS)",
+                  "Synthesis Tools (Synopsys-DC)",
+                  "Spyglass (CDC, Lint)",
+                  "Conformal LEC",
+                  "Waveform Analysis (Verdi, Simvision)",
                   "Microsoft Visio",
-                  "Synopsys Verdi",
-                  "Simvision"
+                  "Windows/Linux"
                 ].map((skill, i) => (
                   <span key={i} className="chip bg-secondary text-secondary-foreground">
                     {skill}
@@ -253,7 +243,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Expertise Section */}
       <section id="expertise" className="py-20 bg-accent/30">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <AnimatedSection className="text-center mb-16">
@@ -305,7 +294,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Projects Section */}
       <section id="projects" className="py-20 bg-background">
         <div className="max-w-7xl mx-auto px-6 md:px-10">
           <AnimatedSection className="text-center mb-16">
@@ -345,17 +333,18 @@ const Index = () => {
           </motion.div>
           
           <AnimatedSection className="text-center mt-12">
-            <Link 
-              to="/projects" 
+            <a 
+              href="https://www.linkedin.com/in/akshayragate" 
+              target="_blank" 
+              rel="noopener noreferrer" 
               className="bg-primary text-white px-6 py-3 rounded-md font-medium hover:bg-primary/90 transition-colors inline-block"
             >
               View All Projects
-            </Link>
+            </a>
           </AnimatedSection>
         </div>
       </section>
 
-      {/* Contact CTA Section */}
       <section id="contact" className="py-20 bg-background relative overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent pointer-events-none"></div>
         <div className="max-w-7xl mx-auto px-6 md:px-10 relative">
