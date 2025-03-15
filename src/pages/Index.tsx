@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
@@ -183,11 +184,16 @@ const Index = () => {
           </AnimatedSection>
           
           <div className="grid md:grid-cols-2 gap-12 items-center">
-            <AnimatedSection>
+            <AnimatedSection className="space-y-6">
               <img 
                 src="/user-image.jpg" 
                 alt="Akshay R" 
                 className="rounded-xl w-full object-cover shadow-md"
+              />
+              <img 
+                src="/photo-1518770660439-4636190af475" 
+                alt="Circuit Board Close-up" 
+                className="rounded-xl w-full object-cover shadow-md h-48"
               />
             </AnimatedSection>
             
@@ -204,7 +210,7 @@ const Index = () => {
               <div className="flex flex-wrap gap-3 mb-6">
                 {[
                   "RTL/ASIC Design", "Verilog HDL", "Timing Analysis",
-                  "Simulators (Cadence-NC, Synopsys-VCS)", "Synthesis Tools (Synopsys-DC, Spyglass)", "Waveform Analysis (Verdi, Simvision)"
+                  "Simulators, Synthesis & Waveform Tools (Cadence-NC, VCS, DC, Spyglass, Verdi, Simvision)"
                 ].map((skill, i) => (
                   <span key={i} className="chip bg-secondary text-secondary-foreground">
                     {skill}
