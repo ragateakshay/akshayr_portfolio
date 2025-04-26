@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useAnimation } from 'framer-motion';
@@ -186,7 +185,7 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <AnimatedSection className="space-y-6">
               <img 
-                src="/user-image.jpg" 
+                src="/akshayr.jpg" 
                 alt="Akshay R" 
                 className="rounded-xl w-full aspect-square object-cover shadow-md"
               />
