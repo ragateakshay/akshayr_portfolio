@@ -1,12 +1,11 @@
-
 import React from 'react';
 import { AnimatedSection } from '@/components/ui/animated-section';
 
 const AboutSection: React.FC = () => {
   return (
-    <section id="about" className="py-20 bg-background">
+    <section id="about" className="py-16 bg-background">
       <div className="max-w-7xl mx-auto px-6 md:px-10">
-        <AnimatedSection className="text-center mb-16">
+        <AnimatedSection className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
             An RTL/ASIC design engineer with 1 year of experience, passionate about creating efficient digital designs 
@@ -14,17 +13,17 @@ const AboutSection: React.FC = () => {
           </p>
         </AnimatedSection>
         
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <AnimatedSection className="space-y-6">
+        <div className="grid md:grid-cols-2 gap-8 items-start">
+          <AnimatedSection className="grid grid-cols-2 gap-4">
             <img 
               src="/akshayr.jpg" 
               alt="Akshay R" 
-              className="rounded-xl w-full aspect-square object-cover shadow-md"
+              className="rounded-lg w-full h-48 object-cover shadow-md"
             />
             <img 
               src="/photo-1518770660439-4636190af475" 
               alt="Circuit Board Close-up" 
-              className="rounded-xl w-full aspect-square object-cover shadow-md"
+              className="rounded-lg w-full h-48 object-cover shadow-md"
             />
           </AnimatedSection>
           
