@@ -188,12 +188,12 @@ const Index = () => {
               <img 
                 src="/user-image.jpg" 
                 alt="Akshay R" 
-                className="rounded-xl w-full object-cover shadow-md"
+                className="rounded-xl w-full aspect-square object-cover shadow-md"
               />
               <img 
                 src="/photo-1518770660439-4636190af475" 
                 alt="Circuit Board Close-up" 
-                className="rounded-xl w-full object-cover shadow-md h-48"
+                className="rounded-xl w-full aspect-square object-cover shadow-md"
               />
             </AnimatedSection>
             
